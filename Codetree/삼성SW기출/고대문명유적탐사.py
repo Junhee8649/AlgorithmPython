@@ -82,4 +82,4 @@ for _ in range(K):
             grid[r][c] = wall_num[wall_count]
             wall_count += 1
         groups = find_artifact(grid)
-    print(final_value)
+    print(final_value, end=" ")
