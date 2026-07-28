@@ -21,7 +21,7 @@ def dijkstra(g):
             return dist
 
         if distance[r][c] < dist:
-                    continue
+            continue
         
         for d in range(4):
             nr, nc = r + dr[d], c + dc[d]
