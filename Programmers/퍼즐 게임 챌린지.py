@@ -15,15 +15,13 @@ def solution(diffs, times, limit):
 
         return is_solve
     
-    start, end = min(diffs), max(diffs)
+    start, end = 1, max(diffs)
 
     while start <= end:
         mid = (start + end) // 2
-        if mid <= 1:
-            return 1
 
         if solve_puzzle(mid):
-            if not solve_puzzle(mid-1):
+            if mid == 1 or not solve_puzzle(mid-1):
                 return mid
             else:
                 end = mid - 1
