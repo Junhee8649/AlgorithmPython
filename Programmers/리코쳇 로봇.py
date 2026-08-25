@@ -24,6 +24,10 @@ def solution(board):
             while 0 <= nr < N and 0 <= nc < M and board[nr][nc] != 'D':
                 nr += dr[d]
                 nc += dc[d]
+
+            nr -= dr[d]
+            nc -= dc[d]
+
             if not visited[nr][nc]:
                 visited[nr][nc] = True
                 q.append((nr, nc, count + 1))
